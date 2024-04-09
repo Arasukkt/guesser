@@ -1,0 +1,24 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(red,blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    border: 2px solid white;
+    max-width:500px;
+    max-height: 500px;
+    padding: 35px;
+}
+.container input{
+    position:relative;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.container button{
+    padding: 20px;
+    border-radius: 10px;
+}

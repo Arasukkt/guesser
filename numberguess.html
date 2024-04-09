@@ -1,0 +1,39 @@
+<f!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="numberguess.css">
+</head>
+<body>
+    <div class="container">
+        <h2>guess the number from 1 to 15</h2>
+        <input type="number" id="ins" ><button type="button" onclick="check()" >check</button>
+        <h5 id="compguess"></h5>
+        <h4 id="rightorwrong"></h4>
+    <p id="score">score:10</p>
+    </div>
+    <script>
+        var score=document.getElementById("score");
+        var totalscore=10;
+        function check()
+        {
+            var inputi=document.getElementById("ins").value;
+            var computer=Math.floor(Math.random()*15);
+            document.getElementById("compguess").innerHTML="computer guessed number is "+computer;
+            if(inputi==computer)
+            {
+                document.getElementById("rightorwrong").innerHTML="YOU GUESSED IT CORRECTLY";
+
+            }
+            else
+            {
+                totalscore=totalscore-1;
+                score.textContent="score:"+totalscore;
+                document.getElementById("rightorwrong").innerHTML="YOU GUESSED IT wrongly";
+            }
+        }
+    </script>
+</body>
+</html>
